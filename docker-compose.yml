@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+    openvpnas:
+        image: linuxserver/openvpn-as:85
+        privileged: true
+        restart: always
+        network_mode: "host"
+        environment:
+            - PGID=1001
+            - PUID=1001
+            - INTERFACE=eth0
+        volumes:
+            - ./config:/config
