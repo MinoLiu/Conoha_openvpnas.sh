@@ -51,7 +51,7 @@ run(){
         curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
         chmod +x /usr/local/bin/docker-compose
 
-        # change user
+        # switch $user to git clone
         sudo -u $user -H sh -c "cd && git clone 'https://github.com/Sean2525/Conoha_openvpnas.sh.git' && \
         mv Conoha_openvpnas.sh openvpn"
 
