@@ -9,7 +9,7 @@ conoha vps (debian 9)
 *Help everyone build their own VPN*
 ``` bash
 # Must be root
-wget -q https://raw.githubusercontent.com/Sean2525/Conoha_openvpnas.sh/master/install.sh && bash install.sh
+sh <(wget -qO -  https://raw.githubusercontent.com/Sean2525/Conoha_openvpnas.sh/master/install.sh)
 
 ```
 ## License
