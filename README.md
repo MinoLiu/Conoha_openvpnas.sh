@@ -1,6 +1,6 @@
 # Conoha_openvpnas.sh
 
-A bash shell script for build docker-openvpnas
+A shell script for build docker-openvpnas
 
 ### Test on 
 conoha vps (debian 9)
