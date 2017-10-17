@@ -6,7 +6,7 @@ A shell script for build docker-openvpnas
 conoha vps (debian 9)
 
 
-*Help everyone build their own VPN*
+*Help everyone to build their own VPN*
 ``` bash
 # Must be root
 sh <(wget -qO -  https://raw.githubusercontent.com/Sean2525/Conoha_openvpnas.sh/master/install.sh)
