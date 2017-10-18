@@ -23,7 +23,7 @@ while [ 1 ]; do
 done
 echo "Port recommended range is 10000 ~ 65535"
 read -p "port(default 22):" port
-if [ -z "$port" ] || [ "$port" -gt 65535 -a "$port" -lt 1 ]; then
+if [ -z "$port" ] || [ "$port" -gt 65535 -o "$port" -lt 1 ]; then
         port=22
 fi
 echo "port set to $port"
