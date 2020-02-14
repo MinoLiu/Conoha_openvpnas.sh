@@ -69,8 +69,7 @@ run(){
         docker-compose up -d
         echo "+ sleep 10"
         sleep 10
-        # delete admin user in as.conf
-        sed -i "s/^\(boot_pam_users.0=admin.*\)/# \1/g" ./config/etc/as.conf
+
         echo "openvpnas is running, start setting"
         echo https://$(ifconfig $interface | grep "inet " | sed 's/^.*inet \([0-9\.]*\).*/\1/g'):943/admin
         echo "Openvpn username: \033[31madmin\033[0m , password: \033[31mpassword\033[0m"
@@ -78,6 +77,8 @@ run(){
         while [ 1 ]; do
                 read -p "Did you finish the configuration?(Y/N)" YES
                 if [ "$YES" = "Y" -o "$YES" = "y" ]; then
+                        # delete admin user in as.conf
+                        sed -i "s/^\(boot_pam_users.0=admin.*\)/# \1/g" ./config/etc/as.conf
                         docker-compose restart
                         break
                 fi
