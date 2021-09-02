@@ -78,7 +78,7 @@ run(){
                 read -p "Did you finish the configuration?(Y/N)" YES
                 if [ "$YES" = "Y" -o "$YES" = "y" ]; then
                         # delete admin user in as.conf
-                        sed -i "s/^\(boot_pam_users.0=admin.*\)/# \1/g" ./config/etc/as.conf
+                        sed -i "s/^\(boot_pam_users.0=\)\(admin.*\)/\1nonexistuseawdqwsaqfrr/g" ./config/etc/as.conf
                         docker-compose restart
                         break
                 fi

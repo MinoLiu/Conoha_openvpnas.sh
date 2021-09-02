@@ -3,7 +3,7 @@
 A shell script for build docker-openvpnas
 
 ### Test on 
-conoha vps (debian 9)
+linode vps (debian 11)
 
 ### Install
 ``` bash
