@@ -67,8 +67,8 @@ run(){
         sed -i "s/\(INTERFACE=\).*/\1$interface/g" docker-compose.yml
         # docker run openvpns
         docker-compose up -d
-        echo "+ sleep 10"
-        sleep 10
+        echo "+ sleep 120"
+        sleep 120
 
         echo "openvpnas is running, start setting"
         echo https://$(ifconfig $interface | grep "inet " | sed 's/^.*inet \([0-9\.]*\).*/\1/g'):943/admin
